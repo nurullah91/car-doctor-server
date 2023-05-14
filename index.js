@@ -22,6 +22,7 @@ const client = new MongoClient(uri, {
         strict: true,
         deprecationErrors: true,
     }
+    
 });
 
 
@@ -47,7 +48,7 @@ const verifyJWT = (req, res, next) =>{
 
 async function run() {
     try {
-        await client.connect();
+      
 
 
         const serviceCollection = client.db('car-doctor').collection('services');
